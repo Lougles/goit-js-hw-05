@@ -9,12 +9,8 @@ class Storage {
     items.push(item);
   }
   removeItem(item) {
-    for (let i = 0; i < items.length; i += 1) {
-      console.log(items[i]);
-      if (items.includes(item)) {
-        console.log(items[i]);
-        items.slice(items[i])
-      }
+    if (items.includes(item)) {
+      items.splice(item, 1)
     }
   }
 }
