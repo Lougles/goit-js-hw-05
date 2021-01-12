@@ -9,8 +9,10 @@ class Storage {
     items.push(item);
   }
   removeItem(item) {
-    if (items.includes(item)) {
-      items.splice(item, 1)
+    for (let i = 0; i < items.length; i += 1) {
+      if (items[i] === item) {
+        items.splice([i], 1);
+      }
     }
   }
 }
